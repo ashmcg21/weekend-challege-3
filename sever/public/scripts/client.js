@@ -28,11 +28,13 @@ function runTasks(event) {
 
 function render() {
     $('#js-table-body').empty();
-  
-      $('#js-table-body').append(`
-      <tr>
-              <td>${list.task}</td>
-              <td><button class="js-btn-delete">X</button></td>
-            </tr>`);
+
+    for (let listedItems of list){
+        $('#js-table-body').append(` 
+    <tr>
+        <td>${listedItems.task}</td>
+        <td><button class="js-btn-delete">X</button></td>
+    </tr>
+        `);
     }
- []
+}
